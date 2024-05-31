@@ -1,0 +1,19 @@
+<div class="form-container">
+    <h1>Register New User</h1>
+    <div class="form-box">
+        <% if (messages.error) { %>
+            <div class="alert alert-danger">
+                <%= messages.error %>
+            </div>
+        <% } %>
+        <form action="/register" method="post">
+            <label for="name">Name:</label>
+            <input type="text"  name="name"/> <br/>
+            <label for="email">Email:</label>
+            <input type="text"  name="email"/> <br/>
+            <label for="password">Password:</label>
+            <input type="password"  name="password"/> <br/>
+            <button type="submit" class="btn btn-dark">Add New User</button>        
+        </form>
+    </div>
+</div>

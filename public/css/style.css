@@ -1,0 +1,392 @@
+*{    
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    font-family:  serif;
+    background: rgb(44, 43, 43);
+    color: white;
+    /* overflow-x: hidden; */    
+}
+.carousel-item img{
+    object-fit: cover;
+    height: 30em;
+}
+.navbar{
+    display: flex;
+    align-items: right;
+    height: 6em;
+    z-index: 2;
+}
+.logo{
+    width: 10em;
+    height: 4.4em;
+    padding: 0%;
+    border-radius: 10px;
+    border-style: double;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+.nav-link {
+    text-decoration: none; 
+    color: inherit; 
+    cursor: pointer; 
+    z-index: 1;
+}
+.carousel-indicators {
+    top: 29em; 
+    left: 50%;
+    text-align: center;
+}
+.carousel-item img {
+    width: 100%;
+    height: 30em; 
+}
+.carousel-caption {
+    top: 27em;
+    left: 50%;
+    z-index: 10;
+    color: #fff; 
+}
+.contain2{
+    clear:both;
+    padding-top: 3em;
+    padding: 2em;
+}
+
+.contain3{
+  padding-top: 2em;
+}
+
+h1{
+  text-align: center;
+}
+#main{
+  text-align: center;
+}
+#cards-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px;
+  padding: 1.5em;
+  padding-left: 4em;
+}    
+.cards .card {
+  width: 200px; 
+  flex: 1 1 200px;
+  --normal-color: #d26969; /* Define a CSS variable for normal color */
+  --hover-color: #923050;  /* Define a CSS variable for hover color */  
+  background-color: var(--normal-color); 
+  display: flex;
+  padding: 0.5em;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 300px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: transform 400ms, background-color 400ms; 
+}   
+.cards .card a.tip {
+  font-size: 1.5em;
+  font-weight: 700;
+  text-decoration: inherit;
+  color: #fff;
+}    
+.cards .card p.second-text {
+  padding-top: 0.2em;
+  font-size: .9em;
+}   
+.cards .card:hover {
+  transform: scale(1.2, 1.2);
+  background-color: var(--hover-color); 
+}  
+.hover {
+  transform: scale(1.2, 1.2);
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  #cards-container {
+    padding-left: 1em;
+  }
+
+  .cards .card {
+    width: calc(50% - 20px); /* Two cards per row */
+  }
+}
+
+/* Further adjustments for smaller screens */
+@media screen and (max-width: 480px) {
+  #cards-container {
+    padding-left: 0.5em;
+  }
+
+  .cards .card {
+    width: calc(100% - 20px); /* One card per row */
+  }
+}
+
+footer {
+    padding: 60px 0;
+  }
+  .footer-links {
+    list-style-type: none;
+    padding: 0;
+  }
+  .footer-links li {
+    padding: 8px 0;
+  }
+  .footer-links li a {
+    color: white;
+    text-decoration: none;
+  }
+  .footer-links li a:hover {
+    text-decoration: underline;
+  }
+
+  .circle {    fill: white;}
+  .circle-one{opacity: 0;}
+  .svg-stroke {
+    fill: transparent;
+    stroke-dasharray: 46.82, 93.64;
+    stroke-dashoffset: 46.82;
+    stroke: white;
+    opacity: 1;
+  }
+  .svg-wrap .svg-stroke {
+    animation: stroke-start 1.6s linear, stroke-end 1.6s 0.8s linear infinite;
+  }
+  .svg-wrap .circle-one {
+    animation: dot-one 0s 0.8s, move-dot 1.6s 0.8s linear infinite;
+  }
+  .svg-wrap .circle-two,
+  .svg-wrap .circle-three {
+    animation: move-dot 1.6s 0.8s linear infinite;
+  }
+  @keyframes dot-one {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes stroke-start {
+    50% {
+      stroke-dashoffset: 46.82;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes stroke-end {
+    50% {
+      stroke-dasharray: 46.82, 93.64;
+      stroke-dashoffset: 0;
+      transform: translateX(0);
+    }
+    100% {
+      stroke-dasharray: 0, 93.64;
+      stroke-dashoffset: -46.82;
+      transform: translateX(10px);
+    }
+  }
+  @keyframes move-dot {
+    50% {
+      transform: translateX(0);
+    }
+  
+    100% {
+      transform: translateX(10px);
+    }
+  }
+
+
+  /* CONTACT-US CSS */
+.background {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+.form-group{
+  padding: 1em;
+}
+.contact-container {
+  border: 1em solid #fff;
+  padding: 4em;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#contactForm{
+    margin-left: 30%;
+}
+
+  
+  /* LAKES CSS */
+.info {
+    display: flex;
+    border: 3px solid white;
+    border-radius: 2em;
+    padding-bottom: 2em;
+    padding-left: 1em;
+    height: 22em;
+}
+.landscape-image{
+    flex: 1;
+    padding: 20px;
+}
+.landscape-image img {
+    width: 100%;
+    border-radius: 10px;
+    height: 18em;
+    filter: blur(5px); /* Initially blurred */
+    transition: filter 0.3s ease-in-out;
+}
+.details {
+    flex: 2;
+    padding: 20px;
+}
+.details h2 {
+    margin-bottom: 10px;
+}
+.details p {
+    margin-bottom: 10px;
+}
+.landscape-image img:hover {
+  filter: blur(0);
+}
+
+/* MOUNTAINS CSS */
+.mount_histPlc-image{
+  flex: 1;
+  padding: 20px;
+  padding-top: 30px;
+}
+.mount_histPlc-image img {
+  width: 100%;
+  border-radius: 10px;
+  height: 18em;
+  transition: transform 0.3s ease-in-out;
+}
+.mount_histPlc-image img:hover {
+  /* transform: rotate(10deg); */
+  transform: scale(1.1);
+}
+
+/* NEW (FORM) CSS */
+.form-container {
+  border: 1em solid #fff;
+  padding: 4em;
+  border-radius: 10px;
+  display: flex;
+  justify-content:space-evenly;
+}
+.form-box input[type="text"] {
+  width: calc(100% - 2em);
+  padding: 0.5em;
+  margin: 0.5em 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-box input[type="password"] {
+  width: calc(100% - 2em);
+  padding: 0.5em;
+  margin: 0.5em 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-box input[type="submit"] {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 1em;
+  border-radius: 5px;
+  cursor: pointer;  
+  width: 100%;
+}
+.form-box input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* CSS OF LIST.EJS  */
+.contain4 {
+  background-color: #333;
+  padding-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  margin: 20px auto;
+}
+#pageTitle {
+  color: #f0f0f0;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+#LinkTitle{
+  color: #f0f0f0;
+  text-align: center;
+  font-size: 1.5em;
+}
+.btn-add:hover {
+  text-decoration: underline;
+}
+#placesTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.table-header {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+}
+.table-cell {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #555; 
+}
+.delete-link {
+  color: red;
+  margin-right: 10px;
+  text-decoration: none;
+}
+.delete-link:hover {
+  text-decoration: underline;
+}
+.edit-link {
+  color: #00FF00;
+  text-decoration: none;
+}
+.edit-link:hover {
+  text-decoration: underline;
+}
+.pagination {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+.page-item {
+  display: inline;
+  margin: 0 5px;
+}
+.page-link {
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+.page-link:hover {
+  text-decoration: underline;
+}

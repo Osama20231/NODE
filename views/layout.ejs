@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <title>Hidden Gems of Pakistan</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <img src="/images/logo_01.png" alt="Website Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Landscapes
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item bg-white" href="/lakes">Lakes</a></li>
+                        <li><a class="dropdown-item bg-white" href="/valleys">Valleys</a></li>
+                        <li><a class="dropdown-item bg-white" href="/mountains">Mountains</a></li>
+                        <li><a class="dropdown-item bg-white" href="/deserts">Deserts</a></li>
+                        <li><a class="dropdown-item bg-white" href="/mosques">Mosques</a></li>
+                        <li><a class="dropdown-item bg-white" href="/historical_places">Historical Places</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/places">API</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-link" href="/contact-us">Contact Us</a>
+                </li>
+                <% if (typeof user !== 'undefined' && user) { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                <% } else { %>
+                    <% if (currentPath === '/register') { %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                    <% } else { %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/register">Register</a>
+                        </li>
+                    <% } %>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <%-body  %>
+
+    <footer class="text-center">
+      <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h5>Contact Us</h5>
+              <ul class="footer-links">
+                <li><a href="/contact-us">Contact Form</a></li>
+                <li>Email: info@pakistanhiddentplaces.com</li>
+                <li>Phone: +92 345 6789012</li>
+                <li>Address: 123 ABC Street, Islamabad, Pakistan</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5>Follow Us</h5>
+              <ul class="footer-links">
+                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><a href="https://twitter.com/login">X (Twitter)</a></li>
+                <li><a href="https://www.instagram.com/accounts/login/">Instagram</a></li>
+                <li><a href="https://www.youtube.com">YouTube</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5>About Us</h5>
+              <p>We are dedicated to showcasing the beauty of Pakistan's neglected tourist attractions.</p>
+              <div class="loader">
+                <svg class="svg-wrap" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <circle stroke-linecap="round" stroke-width="2" class="svg-stroke" cy="25" cx="50" r="15"></circle>
+                  <circle class="circle circle-one" cy="25" cx="35" r="1"></circle>
+                  <circle class="circle circle-two" cy="25" cx="45" r="1"></circle>
+                  <circle class="circle circle-three" cy="25" cx="55" r="1"></circle>
+                </svg>  
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col">
+              <p>&copy; 2024 Pakistani Tourist Places. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>  
+</body>
+</html>

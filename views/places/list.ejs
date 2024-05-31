@@ -1,0 +1,35 @@
+<div class="contain4">
+  <h1 id="pageTitle"><%= pageTitle %></h1>
+  <table id="placesTable">
+      <thead>
+          <tr>
+              <th class="table-header">ID</th>
+              <th class="table-header">Name</th>
+              <th class="table-header">Landscape</th>
+              <th class="table-header">Location</th>
+              <th class="table-header">Actions</th>
+          </tr>
+      </thead>
+      <tbody>
+          <% for(let index = 0; index < places.length; index++) { %>
+          <tr class="table-row">
+              <td class="table-cell"><%= places[index]._id %></td>
+              <td class="table-cell"><%= places[index].name %></td>
+              <td class="table-cell"><%= places[index].landscape %></td>
+              <td class="table-cell"><%= places[index].location %></td>
+              <td class="table-cell">
+                  <a href="/places/delete/<%= places[index]._id %>" class="delete-link">Del</a>
+                  <a href="/places/edit/<%= places[index]._id %>" class="edit-link">Edit</a>
+              </td>
+          </tr>
+          <% } %>
+      </tbody>
+  </table>
+
+  <ul class="pagination">
+      <% for(let index = 1; index <= totalPages; index++) { %>
+      <li class="page-item"><a href="/places/<%= index %>" class="page-link"><%= index %></a></li>
+      <% } %>
+  </ul> 
+  <a href="/places/new" id="LinkTitle" class="btn btn-add">Add New Place</a>
+</div>

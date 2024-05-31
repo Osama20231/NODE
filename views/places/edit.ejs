@@ -1,0 +1,14 @@
+<div class="form-container">
+    <h1>Editing Record</h1>
+    <div class="form-box">
+        <form action="/places/new" method="post">
+            <label for="name">Name:</label>
+            <input type="text" value="<%= place.name %>" name="name" id="name"/> <br/>
+            <label for="landscape">Landscape:</label>
+            <input type="text" value="<%= place.landscape %>" name="landscape" id="landscape"/> <br/>
+            <label for="location">Location:</label>
+            <input type="text" value="<%= place.location %>" name="location" id="location"/> <br/>
+            <input type="submit" value="Edit" /><br/>
+        </form>
+    </div>
+</div>
